@@ -1,6 +1,9 @@
-package sparta.com;
+package sparta.com.SortManager.Sorters.Binary;
 
 public class Node {
+
+
+    //Declaring the fields , with contructors and getter and setters
     private final int value;
     private Node leftChild;
     private Node rightChild;
@@ -28,20 +31,25 @@ public class Node {
     public void setRightChild(Node rightChild) {
         this.rightChild = rightChild;
     }
-    public boolean isLeftChildEmpty(){
-        if (leftChild== null){
+
+    //Creating a method for the both sides of the tree on when we enter the value and how it should handle the value.
+    //If one side is empty as the value enters the tree it returns true
+    public boolean isLeftChildEmpty() {
+        if (leftChild == null) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
-    public boolean isRightChildEmpty(){
-        if (rightChild== null){
+
+    public boolean isRightChildEmpty() {
+        if (rightChild == null) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
+
 
 
 }
