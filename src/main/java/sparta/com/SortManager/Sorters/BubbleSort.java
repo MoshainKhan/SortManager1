@@ -1,7 +1,9 @@
 package sparta.com.SortManager.Sorters;
 
-public class BubbleSort {
-    static void bubbleSort(int array[]) {
+public class BubbleSort implements Sorter{
+    public BubbleSort(){}
+
+    public void sort(int array[]) {
         int size = array.length;
 
         // loop to access each array element

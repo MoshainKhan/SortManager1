@@ -1,7 +1,8 @@
 package sparta.com.SortManager.Sorters;
-
-public class Selection {
-    public static void selectionSort(int arr[])
+//yea bro
+public class Selection implements Sorter {
+    public Selection(){}
+    public void sort(int arr[])
     {
         int n = arr.length;
 

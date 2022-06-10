@@ -1,7 +1,11 @@
 package sparta.com.SortManager.Sorters;
 
-public class Merge {
-    public static void mergeSort(int[] a, int n) {
+public class Merge implements Sorter{
+    public Merge(){}
+    public void sort(int[] arr){
+        mergeSort(arr, arr.length);
+    }
+    private static void mergeSort(int[] a, int n) {
         // It does tingy, divide and conquer method
         if (n < 2) {
             return;

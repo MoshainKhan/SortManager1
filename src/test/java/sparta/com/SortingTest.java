@@ -3,9 +3,12 @@ package sparta.com;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
+import sparta.com.SortManager.Sorters.BubbleSort;
+import sparta.com.SortManager.Sorters.Merge;
+import sparta.com.SortManager.Sorters.Selection;
 
 
-public class AppTest 
+public class SortingTest
 {
     /**
      * Rigorous Test :-)
@@ -28,21 +31,21 @@ public class AppTest
     public void mergeSortTest() {
         int[] actual = { 5, 1, 6, 2, 3, 4 };
         int[] expected = { 1, 2, 3, 4, 5, 6 };
-        SortingAlgorithms.mergeSort(actual, actual.length);
+        new Merge().sort(actual);
         assertArrayEquals(expected, actual);
     }
     @Test
     public void bubbleSortTest() {
         int[] actual = { 5, 1, 6, 2, 3, 4 };
         int[] expected = { 1, 2, 3, 4, 5, 6 };
-        SortingAlgorithms.bubbleSort(actual);
+        new BubbleSort().sort(actual);
         assertArrayEquals(expected, actual);
     }
     @Test
     public void tingySortTest() {
         int[] actual = { 5, 1, 6, 2, 3, 4 };
         int[] expected = { 1, 2, 3, 4, 5, 6 };
-        SortingAlgorithms.selectionSort(actual);
+        new Selection().sort(actual);
         assertArrayEquals(expected, actual);
     }
 }
